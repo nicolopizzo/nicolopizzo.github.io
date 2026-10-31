@@ -4,33 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications · Nicolò Pizzo</title>
+    <meta name="description" content="Publications of Nicolò Pizzo.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400..600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/font/Serif/cmun-serif.css" rel="stylesheet">
     <link href="./assets/css/style.css" rel="stylesheet">
   </head>
   <body>
     <div class="container">
-      <nav class="w-full border-b-1 border-gray-400 px-4 pt-4 pb-2 md:flex">
-        <div class="flex-1 text-2xl">
-          <span class="font-thin">Nicolò</span> <span class="font-medium">Pizzo</span>
-        </div>
-        <ul class="flex flex-none space-x-4 mt-2 md:m-0">
-          <li><a href="index.html">About Me</a></li>
-          <li><a href="publications.html" class="active" aria-current="page">Publications</a></li>
-          <!-- <li><a href="#">Teaching</a></li> -->
-        </ul>
-      </nav>
+      <header class="site-header">
+        <a href="index.html" class="site-name"><span>Nicolò</span> <span class="last">Pizzo</span></a>
+        <nav class="site-nav">
+          <a href="index.html">About</a>
+          <a href="publications.html" class="active" aria-current="page">Publications</a>
+          <!-- <a href="#">Teaching</a> -->
+        </nav>
+      </header>
 
-      <main class="inner-container">
-        <h1 class="text-4xl">Publications</h1>
+      <main>
+        <h1>Publications</h1>
 
-        <h2 class="text-2xl font-bold mt-4 mb-2">2026</h2>
-        <ul class="space-y-2">
-          <li>[c2] <a href="https://link.springer.com/chapter/10.1007/978-3-032-38214-6_17">‘A Toolbox for Undefined Terms in Type Theory’</a>, Nicolò Pizzo and Claudio Sacerdoti Coen</li>
-          <li>[c1] <a href="https://doi.org/10.48550/arXiv.2605.09179">‘A Reversible Crumbling Abstract Machine for Plotkin’s Call-by-Value’</a>, Nicolò Pizzo and Claudio Sacerdoti Coen</li>
-        </ul>
+        <h2 class="year">2026</h2>
+        <ol class="pubs">
+          <li>
+            <span class="pub-id">c2</span>
+            <div>
+              <a class="pub-title" href="https://link.springer.com/chapter/10.1007/978-3-032-38214-6_17" target="_blank" rel="noopener">A Toolbox for Undefined Terms in Type Theory</a>
+              <span class="pub-venue">Published in <a href="https://cicm-conference.org/2026/cicm.php?event=&menu=accepted" target="_blank" rel="noopener">CICM 2026</a></span>
+              <span class="pub-authors"><span class="me">Nicolò Pizzo</span> and Claudio Sacerdoti Coen</span>
+            </div>
+          </li>
+          <li>
+            <span class="pub-id">c1</span>
+            <div>
+              <a class="pub-title" href="https://doi.org/10.48550/arXiv.2605.09179" target="_blank" rel="noopener">A Reversible Crumbling Abstract Machine for Plotkin’s Call-by-Value</a>
+              <span class="pub-venue">Published in <a href="https://reversible-computation.github.io/2026/accepted/" target="_blank" rel="noopener">RC 2026</a></span>
+              <span class="pub-authors"><span class="me">Nicolò Pizzo</span> and Claudio Sacerdoti Coen</span>
+            </div>
+          </li>
+        </ol>
       </main>
+
     </div>
   </body>
 </html>

@@ -1,59 +1,228 @@
 @import "tailwindcss";
 
+@theme {
+  --font-display: 'Computer Modern Serif', 'Latin Modern Roman', serif;
+  --font-serif: 'Source Serif 4', Georgia, serif;
+}
+
 :root {
-  --color-text: #2d3a63;
-  --color-page: #9dab86;
-  --color-card: #f8f8f8;
+  --color-text: #e4e2da;
+  --color-muted: #9a9a92;
+  --color-accent: #a9bc8c;
+  --color-rule: #3a3a36;
+  --color-page: #1c1c1a;
+}
+
+html {
+  color-scheme: dark;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  font-family: 'Bodoni Moda', serif;
-  font-size: 14pt;
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  line-height: 1.7;
   color: var(--color-text);
   background-color: var(--color-page);
 }
 
+::selection {
+  background: color-mix(in srgb, var(--color-accent) 30%, transparent);
+}
+
 .container {
+  width: 45rem;
   min-height: 100vh;
-  background: var(--color-card);
-  width: 100vw;
-  padding: 1rem 2rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
-@media (min-width: 600px) {
-  .container {
-    width: 80vw;
-    margin: auto;
-    box-shadow: 0 0 20px #30303060;
-  }
+/* Header */
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+  padding: 2.5rem 0 1.25rem;
+  border-bottom: 1px solid var(--color-rule);
 }
 
-.inner-container {
-  padding: 2rem 1rem;
+.site-name {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  font-style: normal;
+}
+
+.site-name .last {
+  font-weight: 500;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.75rem;
+}
+
+.site-nav a {
+  font-size: 0.8rem;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  color: var(--color-muted);
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.site-nav a:hover {
+  color: var(--color-text);
+}
+
+.site-nav a.active {
+  color: var(--color-text);
+  border-bottom-color: var(--color-accent);
+}
+
+
+/* Content */
+
+main {
+  flex: 1;
+  padding: 3.5rem 0 4rem;
+}
+
+h1,
+h2 {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 h1 {
-  font-weight: 500;
-  font-style: italic;
+  font-size: 2.5rem;
+  margin-bottom: 1.75rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin: 3rem 0 1rem;
 }
 
 a {
+  color: inherit;
   text-decoration: underline;
-  font-style: italic;
+  text-decoration-color: color-mix(in srgb, var(--color-accent) 60%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: color 0.2s, text-decoration-color 0.2s;
 }
 
 a:hover {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+}
+
+.prose p + p {
+  margin-top: 1rem;
+}
+
+.portrait {
+  width: 7rem;
+  height: 7rem;
+  object-fit: cover;
+  border-radius: 9999px;
+  box-shadow: 0 0 0 6px var(--color-page), 0 0 0 7px var(--color-rule);
+}
+
+@media (min-width: 40rem) {
+  .portrait {
+    width: 9rem;
+    height: 9rem;
+  }
+}
+
+/* Contacts */
+
+.contacts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.35rem 1.5rem;
+}
+
+.contacts dt {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-muted);
+  padding-top: 0.25rem;
+}
+
+/* Publications */
+
+.year {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-style: normal;
+  font-size: 1.25rem;
+  color: var(--color-muted);
+}
+
+.year::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--color-rule);
+}
+
+.pubs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pubs li {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 0 0.75rem;
+}
+
+.pub-id {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  padding-top: 0.15rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.pub-title {
   font-weight: 600;
+  text-decoration: none;
 }
 
-nav a {
-  font-size: 16pt;
+.pub-title:hover {
+  text-decoration: underline;
 }
 
-nav a:hover {
-  font-weight: 500;
+.pub-venue {
+  display: block;
+  color: var(--color-text);
+  font-size: 1rem;
 }
 
-nav a.active {
-  font-weight: 600;
+.pub-authors {
+  display: block;
+  color: var(--color-muted);
+  font-size: 1rem;
+}
+
+.pub-authors .me {
+  color: var(--color-text);
 }

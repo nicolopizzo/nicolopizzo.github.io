@@ -4,55 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nicolò Pizzo</title>
+    <meta name="description" content="Nicolò Pizzo — PhD student in theoretical Computer Science at the University of Bologna.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400..600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/font/Serif/cmun-serif.css" rel="stylesheet">
     <link href="./assets/css/style.css" rel="stylesheet">
   </head>
   <body>
     <div class="container">
-      <nav class="w-full border-b-1 border-gray-400 px-4 pt-4 pb-2 md:flex">
-        <div class="flex-1 text-2xl">
-          <span class="font-thin">Nicolò</span> <span class="font-medium">Pizzo</span>
-        </div>
-        <ul class="flex flex-none space-x-4 mt-2 md:m-0">
-          <li><a href="index.html" class="active" aria-current="page">About Me</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <!-- <li><a href="#">Teaching</a></li> -->
-        </ul>
-      </nav>
+      <header class="site-header">
+        <a href="index.html" class="site-name"><span>Nicolò</span> <span class="last">Pizzo</span></a>
+        <nav class="site-nav">
+          <a href="index.html" class="active" aria-current="page">About</a>
+          <a href="publications.html">Publications</a>
+          <!-- <a href="#">Teaching</a> -->
+        </nav>
+      </header>
 
-      <main class="inner-container">
-        <h1 class="text-4xl">About me</h1>
-
-        <div class="flex flex-col-reverse md:flex-row mt-2 gap-4">
-          <div class="flex-2 space-y-4">
-            <p>
+      <main>
+        <div class="flex flex-col-reverse sm:flex-row sm:items-start gap-8 sm:gap-10">
+          <div class="flex-1">
+            <h1>About me</h1>
+            <div class="prose">
+              <p>
               I am a PhD student at the <i>University of Bologna</i> under the supervision of <a href="https://www.cs.unibo.it/~claudio.sacerdoti3/">Claudio Sacerdoti Coen</a>.
               You can visit my UniBo page <a href="https://www.unibo.it/sitoweb/nicolo.pizzo2">here</a>.
-            </p>
-            <p>
+              </p>
+              <p>
               My research interests revolve around theoretical Computer Science, focusing on Logic, λ-calculus and Interactive Theorem Provers.
-            </p>
-            <p>
+              </p>
+              <p>
               I am currently also a teaching assistant for the <a href="https://www.unibo.it/en/study/course-units-transferable-skills-moocs/course-unit-catalogue/course-unit/2026/518527">Scalable and Cloud Programming</a> and <a href="https://www.unibo.it/en/study/course-units-transferable-skills-moocs/course-unit-catalogue/course-unit/2026/524333">Logic for Computer Scientists</a> courses.
-            </p>
-            <p>
+              </p>
+              <p>
               You can download my Curriculum Vitae <a href="#">here</a>.
-            </p>
+              </p>
+            </div>
           </div>
 
-          <div class="flex-none md:flex-1">
-            <img src="assets/images/profile-image.jpg" alt="Portrait of Nicolò Pizzo" class="rounded-full md:rounded-xl shadow-md/20 md:shadow-lg/20 w-1/3 md:w-4/5 md:mx-auto">
-          </div>
+          <img src="assets/images/profile-image.jpg" alt="Portrait of Nicolò Pizzo" class="portrait flex-none sm:mt-3">
         </div>
 
-        <h2 class="text-3xl italic mt-4">Contacts</h2>
-        <ul>
-          <li>Email address: <a href="mailto:nicolo.pizzo2@unibo.it">nicolo.pizzo2@unibo.it</a></li>
-          <li>Github page: <a href="https://github.com/nicolopizzo">nicolopizzo</a></li>
-        </ul>
+        <h2>Contacts</h2>
+        <dl class="contacts">
+          <dt>Email</dt>
+          <dd><a href="mailto:nicolo.pizzo2@unibo.it">nicolo.pizzo2@unibo.it</a></dd>
+          <dt>GitHub</dt>
+          <dd><a href="https://github.com/nicolopizzo">nicolopizzo</a></dd>
+        </dl>
       </main>
+
     </div>
   </body>
 </html>
